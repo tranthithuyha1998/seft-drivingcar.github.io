@@ -39,7 +39,11 @@ def on_message1(data):
 def sioSendPicTime(data):
 	global isStart, sttSpeed
 	case = data
-	if (case=="start"):
+	if(case=="connect"):
+		print('Server connected to client\n')
+	if(case =="disconnect"):
+		print('Server disconnected client\n')
+	if (case=="run"):
 		isStart=1
 	elif (case=="stop"):
 		isStart=0
